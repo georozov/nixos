@@ -19,28 +19,36 @@ in
 
       opts = {
         tabstop = 2;
-	softtabstop = 2;
-	shiftwidth = 2;
-	expandtab = true;
+        softtabstop = 2;
+        shiftwidth = 2;
+        expandtab = true;
       };
 
       keymaps = [
         {
-          key = "<C-h>";
+          key = "<M-h>";
           action = "<C-w>h";
-	}
+        }
         {
-          key = "<C-j>";
+          key = "<M-j>";
           action = "<C-w>j";
-	}
+        }
         {
-          key = "<C-k>";
+          key = "<M-k>";
           action = "<C-w>k";
-	}
+        }
+        {
+          key = "<M-l>";
+          action = "<C-w>l";
+        }
+        {
+          key = "<leader>pv";
+          action = "vim.cmd('Ex')";
+        }
         {
           key = "<C-l>";
-          action = "<C-w>l";
-	}
+          action = "vim.cmd('nohl')";
+        }
       ];
 
       plugins = {
@@ -49,16 +57,16 @@ in
         harpoon = {
           enable = true;
           enableTelescope = true;
-	};
+        };
 
-	telescope = {
-	  enable = true;
-	  keymaps = {
-	    "<C-p>".action = "git_files";
-	    "<leader>ps".action = "live_grep";
-	    "<leader>pf".action = "find_files";
-	  };
-	};
+        telescope = {
+          enable = true;
+          keymaps = {
+            "<C-p>".action = "git_files";
+            "<leader>ps".action = "live_grep";
+            "<leader>pf".action = "find_files";
+          };
+        };
       };
     };
   };
