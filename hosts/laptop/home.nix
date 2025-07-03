@@ -6,13 +6,14 @@
   imports = [
     ../../homeManagerModules/sway.nix
     ../../homeManagerModules/nixvim.nix
+    ../../homeManagerModules/qutebrowser.nix
   ];
 
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+    tmux
     firefox
-    qutebrowser
     wezterm
     ripgrep
   ];

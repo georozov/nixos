@@ -139,4 +139,6 @@
   };
 
   security.polkit.enable = true;
+
+  time.timeZone = "Europe/Istanbul";
 }
