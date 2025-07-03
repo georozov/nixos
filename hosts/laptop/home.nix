@@ -9,6 +9,7 @@
     ../../homeManagerModules/nixvim.nix
     ../../homeManagerModules/qutebrowser.nix
     ../../homeManagerModules/zsh.nix
+    ../../homeManagerModules/starship.nix
   ];
 
   home.stateVersion = "25.05";
@@ -18,6 +19,7 @@
     firefox
     wezterm
     ripgrep
+    telegram-desktop
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
