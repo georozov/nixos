@@ -8,5 +8,9 @@
         "K" = "tab-next";
       };
     };
+
+    settings = {
+      colors.webpage.darkmode.enabled = true;
+    };
   };
 }
