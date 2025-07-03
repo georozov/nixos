@@ -43,11 +43,11 @@ in
         }
         {
           key = "<leader>pv";
-          action = "vim.cmd('Ex')";
+          action = "<cmd> Ex <CR>";
         }
         {
           key = "<C-l>";
-          action = "vim.cmd('nohl')";
+          action = "<cmd> nohl <CR>";
         }
       ];
 

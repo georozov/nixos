@@ -46,21 +46,11 @@ in
 
       extraConfig = ''
         corner_radius 5
-      '';
-    };
 
-    programs.waybar = {
-      enable = true;
-
-      settings = [
-        {
-          layer = "top";
-          position = "top";
-          modules-left = [ "sway/workspaces" ];
-          modules-center = [ "clock" ];
-          modules-right = [ "tray" "pulseaudio" "battery" ];
+        input "type:touchpad" {
+          natural_scroll enabled
         }
-      ];
+      '';
     };
   };
 }
