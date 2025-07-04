@@ -9,6 +9,10 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    home.packages = [
+      pkgs.swaybg
+    ];
+
     wayland.windowManager.sway = {
       enable = true;
       package = pkgs.swayfx;
@@ -50,6 +54,8 @@ in
         input "type:touchpad" {
           natural_scroll enabled
         }
+
+        exec_always swaybg -i ${../wallpapers/default.png} -m fill
       '';
     };
   };
