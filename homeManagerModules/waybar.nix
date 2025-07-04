@@ -26,9 +26,9 @@
             "critical" = 15;
           };
           "format" = "{icon} {capacity}%";
-          "format-charging" = "󱐋 {capacity}%";
+          "format-charging" = "<span style='color:yellow'>󱐋</span> {capacity}%";
           "interval" = 1;
-          "format-icons" = ["󰂎" "󰁼" "󰁿" "󰂁" "󰁹"];
+          "format-icons" = [ "󰂎" "󰁼" "󰁿" "󰂁" "󰁹" ];
           "tooltip" = true;
         };
 
@@ -57,7 +57,7 @@
         "clock" = {
           "interval" = 1;
           "timezone" = "Europe/Istanbul";
-          "format" = "<span color='#BF00FF'>   </span>{:%H:%M} ";
+          "format" = "  {:%H:%M}";
           "tooltip" = true;
           "tooltip-format" = "{:L%d.%m.%Y, %A}";
         };
@@ -76,7 +76,7 @@
 
       #waybar {
         color: #cdd6f4;
-        background-color: rgba(24, 24, 37, 1.0);
+        background-color: transparent;
         border: none;
         border-radius: 5px;
         transition-property: background-color;
@@ -132,16 +132,23 @@
       }
 
       #battery {
-        background-color: orange;
+        background-color: rgba(36, 36, 52, 1.0);
       }
 
       #pulseaudio {
-        background-color: blue;
+        background-color: rgba(36, 36, 52, 1.0);
       }
 
       #clock {
-        border: solid 1px #BF00FF;
-        border-radius: 4px;
+        background-color: rgba(36, 36, 52, 1.0);
+      }
+
+      #tray {
+        background-color: rgba(36, 36, 52, 1.0);
+      }
+
+      #tray * {
+        margin: 0;
       }
     '';
   };
