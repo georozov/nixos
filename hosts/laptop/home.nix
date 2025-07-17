@@ -9,16 +9,17 @@
     ../../homeManagerModules/nixvim.nix
     ../../homeManagerModules/qutebrowser.nix
     ../../homeManagerModules/zsh.nix
+    ../../homeManagerModules/tmux.nix
   ];
 
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    tmux
     firefox
     wezterm
     ripgrep
     telegram-desktop
+    nekoray
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -38,8 +39,6 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    XKB_DEFAULT_OPTIONS = "caps:escape,grp:lalt_lshift_toggle";
-    XKB_DEFAULT_LAYOUT = "us,ru";
   };
 
   home.shellAliases = {

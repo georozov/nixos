@@ -18,7 +18,7 @@
 
         modules-left = [ "clock" "tray" ];
         modules-center = [ "sway/workspaces" ];
-        modules-right = [ "pulseaudio" "battery" "sway/lanugage" ];
+        modules-right = [ "pulseaudio" "battery" "sway/language" ];
 
         "battery" = {
           "states" = {
@@ -63,7 +63,7 @@
         };
 
         "sway/language" = {
-          "format" = "{flag} {short}";
+          "format" = "{short}";
           "on-click" = "swaymsg input type:keyboard xkb_switch_layout next";
         };
       }
@@ -149,6 +149,10 @@
       }
 
       #tray {
+        background-color: rgba(36, 36, 52, 1.0);
+      }
+
+      #language {
         background-color: rgba(36, 36, 52, 1.0);
       }
 

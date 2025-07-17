@@ -26,24 +26,12 @@ in
 
       keymaps = [
         {
-          key = "<M-h>";
-          action = "<C-w>h";
-        }
-        {
-          key = "<M-j>";
-          action = "<C-w>j";
-        }
-        {
-          key = "<M-k>";
-          action = "<C-w>k";
-        }
-        {
-          key = "<M-l>";
-          action = "<C-w>l";
-        }
-        {
           key = "<leader>pv";
           action = "<cmd> Ex <CR>";
+        }
+        {
+          key = "<C-l>";
+          action = "<cmd> nohl <CR>";
         }
         {
           key = "<C-l>";
@@ -66,6 +54,29 @@ in
             "<leader>ps".action = "live_grep";
             "<leader>pf".action = "find_files";
           };
+        };
+        
+        tmux-navigator = {
+          enable = true;
+
+          keymaps = [
+            {
+              action = "left";
+              key = "<M-h>";
+            }
+            {
+              action = "down";
+              key = "<M-j>";
+            }
+            {
+              action = "up";
+              key = "<M-k>";
+            }
+            {
+              action = "right";
+              key = "<M-l>";
+            }
+          ];
         };
       };
     };

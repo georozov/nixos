@@ -46,6 +46,15 @@ in
           "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -1%";
           "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
         };
+
+        bindkeysToCode = true;
+
+        input = {
+          "type:keyboard" = {
+            xkb_options = "caps:escape,grp:alt_shift_toggle";
+            xkb_layout = "us,ru";
+          };
+        };
       };
 
       extraConfig = ''
