@@ -18,7 +18,7 @@
 
         modules-left = [ "clock" "tray" ];
         modules-center = [ "sway/workspaces" ];
-        modules-right = [ "pulseaudio" "battery" ];
+        modules-right = [ "pulseaudio" "battery" "sway/lanugage" ];
 
         "battery" = {
           "states" = {
@@ -60,6 +60,11 @@
           "format" = "  {:%H:%M}";
           "tooltip" = true;
           "tooltip-format" = "{:L%d.%m.%Y, %A}";
+        };
+
+        "sway/language" = {
+          "format" = "{flag} {short}";
+          "on-click" = "swaymsg input type:keyboard xkb_switch_layout next";
         };
       }
     ];
