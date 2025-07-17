@@ -9,7 +9,6 @@
     ../../homeManagerModules/nixvim.nix
     ../../homeManagerModules/qutebrowser.nix
     ../../homeManagerModules/zsh.nix
-    ../../homeManagerModules/starship.nix
   ];
 
   home.stateVersion = "25.05";
