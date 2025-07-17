@@ -11,10 +11,9 @@
   programs.zsh = {
     enable = true;
 
-    oh-my-zsh = { # "ohMyZsh" without Home Manager
+    oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "robbyrussell";
     };
   };
 }

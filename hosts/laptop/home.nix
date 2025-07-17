@@ -38,7 +38,8 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    XKB_DEFAULT_OPTIONS = "caps:escape";
+    XKB_DEFAULT_OPTIONS = "caps:escape,grp:lalt_lshift_toggle";
+    XKB_DEFAULT_LAYOUT = "us,ru";
   };
 
   home.shellAliases = {
