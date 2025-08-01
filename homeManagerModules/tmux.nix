@@ -16,7 +16,7 @@ in
   programs.tmux = {
     enable = true;
     shortcut = "b";
-    keyMode = "emacs";
+    keyMode = "vi";
     terminal = "screen-256color";
 
     extraConfig = ''
