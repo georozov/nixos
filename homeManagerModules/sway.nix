@@ -62,6 +62,9 @@ in
 
         input "type:touchpad" {
           natural_scroll enabled
+          tap enabled
+          accel_profile flat
+          pointer_accel 0.5
         }
 
         exec_always swaybg -i ${../wallpapers/default.png} -m fill

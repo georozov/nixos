@@ -20,6 +20,7 @@
     ripgrep
     telegram-desktop
     nekoray
+    jmeter
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

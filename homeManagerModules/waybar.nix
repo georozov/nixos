@@ -18,7 +18,20 @@
 
         modules-left = [ "clock" "tray" ];
         modules-center = [ "sway/workspaces" ];
-        modules-right = [ "pulseaudio" "battery" "sway/language" ];
+        modules-right = [ "pulseaudio" "battery" "network" "sway/language" ];
+
+        "network" = {
+          "format-wifi" = "{icon} {essid}";
+          "format-icons" = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          "format-ethernet" = "󰀂";
+          "format-alt" = "󱛇";
+          "format-disconnected" = "󰖪";
+          "tooltip-format-wifi" = "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
+          "tooltip-format-ethernet" = "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
+          "tooltip-format-disconnected" = "Disconnected";
+          "interval" = 5;
+          "nospacing" = 1;
+        };
 
         "battery" = {
           "states" = {
@@ -137,6 +150,10 @@
       }
 
       #battery {
+        background-color: rgba(36, 36, 52, 1.0);
+      }
+
+      #network {
         background-color: rgba(36, 36, 52, 1.0);
       }
 
