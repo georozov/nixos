@@ -42,7 +42,7 @@
   users.users.snuff = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "video" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "adbusers" ];
     home = "/home/snuff";
   };
 
@@ -64,6 +64,7 @@
     (sddm-astronaut.override(oldAttrs: {
       embeddedTheme = "black_hole";
     }))
+    (flameshot.override { enableWlrSupport = true; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -124,6 +125,8 @@
     wrapperFeatures.gtk = true;
   };
 
+  programs.adb.enable = true;
+
   services.displayManager = {
     enable = true;
     sddm = {
@@ -140,4 +143,16 @@
   security.polkit.enable = true;
 
   time.timeZone = "Europe/Istanbul";
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+      };
+    };
+  };
+
+  services.blueman.enable = true;
 }
