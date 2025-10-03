@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, nvim, system, ... }:
 
 {
   imports = [
@@ -65,6 +65,7 @@
       embeddedTheme = "black_hole";
     }))
     (flameshot.override { enableWlrSupport = true; })
+    inputs.neovim.packages.${system}.nvim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

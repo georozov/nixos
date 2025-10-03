@@ -6,7 +6,6 @@
   imports = [
     ../../homeManagerModules/sway.nix
     ../../homeManagerModules/waybar.nix
-    ../../homeManagerModules/nixvim.nix
     ../../homeManagerModules/qutebrowser.nix
     ../../homeManagerModules/zsh.nix
     ../../homeManagerModules/tmux.nix
@@ -58,5 +57,4 @@
   };
 
   services.sway.enable = true;
-  services.nixvim.enable = true;
 }

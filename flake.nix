@@ -9,9 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+    neovim = {
+      url = "github:ISNUFFI/neovim-flake";
     };
   };
 
@@ -31,10 +30,10 @@
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit system; inherit inputs; };
 
-	modules = [
-	  ./hosts/laptop/configuration.nix
-	  inputs.home-manager.nixosModules.default
-	];
+        modules = [
+          ./hosts/laptop/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
       };
     };
   };
